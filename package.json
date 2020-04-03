@@ -5,6 +5,8 @@
   "main": "src/bin/www",
   "scripts": {
     "start": "node src/bin/www",
+    "dev": "NODE_ENV=development nodemon",
+    "pm2": "pm2 start --name nodejs-boilerplate src/bin/www",
     "test": "mocha  src/test/index.js",
     "coverage": "./node_modules/.bin/nyc npm run test",
     "report": "./node_modules/.bin/nyc --reporter=html mocha src/test/index.js",
@@ -76,7 +78,9 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.4.3",
     "mocha": "^6.2.0",
+    "nodemon": "^2.0.2",
     "nyc": "^14.1.1",
+    "pm2": "^4.2.3",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1",
     "supertest": "^4.0.2"
